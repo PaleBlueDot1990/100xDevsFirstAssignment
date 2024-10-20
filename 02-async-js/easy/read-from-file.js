@@ -41,5 +41,5 @@ callback queue, the event loop is waiting for this
 expensive for loop to finish so that printFile
 function can be pushed to the main stack. And
 this wait time is significant because the for loop
-take a significant time to run. 
+take a significant time to run.
 */
