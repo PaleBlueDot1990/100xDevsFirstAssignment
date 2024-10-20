@@ -5,12 +5,21 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-palindrome`
 */
+function transform(str){
+    var answer="";
+    for(var i=0; i<str.length; i++) {
+        if(str[i]!=" " || str[i]!="," || str[i]!="?" || str[i]!="!") {
+            answer+=str[i];
+        }
+    }
+    return answer;
+}
 
 function isPalindrome(str) {
-  for(var i=0, j=str.length()-1; i<j; i++, j--){
-    var c=str[i].toLowerCase();
-    var d=str[j].toLowerCase();
-    if(c!=d) {
+  str=str.toLowerCase();
+  str=transform(str);
+  for(var i=0, j=str.length-1; i<j; i++, j--){
+    if(str[i]!=str[j]) {
         return false;
     }
   }
